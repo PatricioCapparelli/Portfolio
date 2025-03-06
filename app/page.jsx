@@ -44,7 +44,7 @@ const Home = () => {
     </div>
     <Stats/>
   </section>
-    )
+  )
 }
 
 export default Home;
