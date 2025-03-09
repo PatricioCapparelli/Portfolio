@@ -12,7 +12,7 @@ import { SiTailwindcss, SiNextdotjs, SiMongodb, SiExpress, SiMongoose } from "re
 // about 
 const about = {
     title: 'About me',
-    description:"Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    description:"Actualmente estoy cursando la tecnicatura en programación en la Universidad Tecnológica Nacional (UTN) y complementando mis estudios de manera autodidacta. Estoy buscando mi primer trabajo para expandir mis conocimientos y profesionalizarme.",
     info: [
         {fieldName: "Name",
         fieldValue: 'Patricio Capparelli'
@@ -36,7 +36,7 @@ const about = {
 const experience = {
     icon:'',
     title: 'My experience',
-    description: "Desarrollador web Full Stack con un año de aprendizaje autodidacta intensivo, durante el cual dominé el stack MERN (MongoDB, Express.js, React, Node.js) y otras tecnologías. En 2025, inicié la Tecnicatura en Programación en la UTN (Universidad Tecnológica Nacional), donde actualmente estoy en primer año (tras aprobar el curso de ingreso), ampliando mis conocimientos.",
+    description: "Un año de aprendizaje autodidacta intensivo, durante el cual dominé el stack MERN (MongoDB, Express.js, React, Node.js) y otras tecnologías. En 2025, inicié la Tecnicatura en Programación en la UTN (Universidad Tecnológica Nacional), donde actualmente estoy en primer año tras aprobar el curso de ingreso, ampliando mis conocimientos.",
     items: [
         {
             course: "Desarrollo Web",
