@@ -17,7 +17,7 @@ import {
 
 import Link from "next/link";
 import Image from "next/image";
-import { Description } from "@radix-ui/react-dialog";
+import WorkSliderBtns from "@/components/ui/WorkSliderBtns";
 
 const projects = [
     {
@@ -25,7 +25,7 @@ const projects = [
         category: 'frontend',
         title: 'project 1',
         description:
-            'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+            ' E-commerce utilizando javascript vanilla.',
         stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript"}],
         image: '/jswork.png',
         live: '',
@@ -36,7 +36,7 @@ const projects = [
         category: 'frontend',
         title: 'project 2',
         description:
-            'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+            'E-commerce utilizando React y Firestore para el manejo de productos y compras.',
         stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "React"}],
         image: '/react.png',
         live: '',
@@ -47,33 +47,33 @@ const projects = [
         category: 'frontend',
         title: 'project 3',
         description:
-            'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
+            'Paint windows 95, utilizando javascript vanilla.',
         stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript"}],
-        image: '/public/jswork.png',
-        live: '',
+        image: '/paintjs.png',
+        live: 'https://paint-js-seven.vercel.app/',
         github: 'https://github.com/PatricioCapparelli/JS-Ecommerce'
     },
     {
         num: '04',
         category: 'fullstack',
-        title: 'project 3',
+        title: 'project 4',
         description:
-            'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
-        stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript"}],
-        image: '/public/jswork.png',
+            'Implementación de un CRUD para la API utilizando SSR con Node.js, Express, Handlebars y MongoDB como base de datos para el manejo de los productos.',
+        stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript"}, { name: "MongoDB" }, { name: "Mongoose" }],
+        image: '/fullstack.png',
         live: '',
-        github: 'https://github.com/PatricioCapparelli/JS-Ecommerce'
+        github: 'https://github.com/PatricioCapparelli/ProyectoFinal-backend'
     },
     {
         num: '05',
         category: 'backend',
-        title: 'project 1',
+        title: 'project 5',
         description:
-            'Lorem ipsum dolor sit amet consectetur, adipisicing elit.',
-        stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript"}],
-        image: '/public/jswork.png',
+            'Sistema de autenticación de usuarios utilizando un servidor basado en capas, JSON Web Tokens (JWT) y Mongoose para manejar la base de datos. permite a los usuarios registrarse, iniciar sesión, y acceder a recursos protegidos de manera segura mediante tokens de autenticación. Ademas tiene un sistema de carritos para añadir o eliminar productos dependiendo el rol del usuario.',
+        stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript"}, { name: "MongoDB"}, { name: "Mongoose"}],
+        image: '/backend.png',
         live: '',
-        github: 'https://github.com/PatricioCapparelli/JS-Ecommerce'
+        github: 'https://github.com/PatricioCapparelli/proyectoFinal-Backend2'
     },
 ]
 
@@ -148,19 +148,21 @@ const Work = () => {
                         {projects.map((project, index) => {
                             return (
                                 <SwiperSlide key={index}className="w-full">
-                                <div className="h-[460px] relative flex justify-center items-center bg-pink-50/20">
+                                <div className="h-[460px] relative flex justify-center items-center bg-pink-50/20 rounded-xl">
                                 {/* overlay */}
-                                <div></div>
+                                <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10 rounded-xl"></div>
                                 {/* image */}
                                 <div className="relative w-full h-full">
                                     <Image src={project.image} fill 
-                                    className="object-cover"
+                                    className="object-cover rounded-xl"
                                     alt=""/>
                                 </div>
                                 </div>
                                 </SwiperSlide>
                             );
                         })}
+                        {/* Slider buttons */}
+                        <WorkSliderBtns containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between xl:w-max xl:justify-none" btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all rounded-full"/>
                     </Swiper>
                 </div>
             </div>
