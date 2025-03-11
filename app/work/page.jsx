@@ -39,7 +39,7 @@ const projects = [
             'E-commerce utilizando React y Firestore para el manejo de productos y compras.',
         stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "React"}],
         image: '/react.png',
-        live: '',
+        live: 'https://react-js-ecommerce-three.vercel.app/',
         github: 'https://github.com/PatricioCapparelli/ReactJs-Ecommerce'
     },
     {
