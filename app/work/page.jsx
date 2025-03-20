@@ -28,7 +28,7 @@ const projects = [
             ' E-commerce utilizando javascript vanilla.',
         stack: [{ name: "Html 5" }, { name: "Css 3" }, { name: "Javascript"}],
         image: '/jswork.png',
-        live: '',
+        live: 'https://js-ecommerce-jsovl37wj-patriciocapparellis-projects.vercel.app/',
         github: 'https://github.com/PatricioCapparelli/JS-Ecommerce'
     },
     {
