@@ -75,6 +75,39 @@ const projects = [
         live: '',
         github: 'https://github.com/PatricioCapparelli/proyectoFinal-Backend2'
     },
+    {
+        num: '06',
+        category: 'Backend',
+        title: 'project 6',
+        description:
+            'Desarrollé un sistema de gestión educativa que permite administrar estudiantes y sus calificaciones a través de un menú interactivo por consola. El programa maneja una matriz de calificaciones junto a listas paralelas (nombres, géneros, legajos), e incluye múltiples funcionalidades, a travez de unicamente logica y algoritmia, sin metodos.',
+        stack: [{ name: "Python"}],
+        image: '/parcial.png',
+        live: '',
+        github: 'https://github.com/PatricioCapparelli/I-Parcial-Programacion-UTN'
+    },
+    {
+        num: '07',
+        category: 'Full-Stack',
+        title: 'project 7',
+        description:
+            'Desarrollé un juego de Batalla Naval creado con el modulo Pygame, para el segundo parcial de la Tecnicatura en Programación de la UTN.',
+        stack: [{ name: "Python"}],
+        image: '/batalla-naval.png',
+        live: '',
+        github: 'https://github.com/PatricioCapparelli/PROGRAMACION_I_SP'
+    },
+    {
+        num: '08',
+        category: 'Full-Stack',
+        title: 'project 8',
+        description:
+            'Desarrollé una app movil de estacionamiento, en el mapa se renderizan las zonas que esta permitido estacionar y las que esta prohibido, pasandole las coordenadas a la API de BA Transportes, que devuelve los datos de la ciudad. Actualmente esta funcionando, pero sigue en desarrollo.',
+        stack: [{ name: "Java, Kotlin"}],
+        image: '/estacionapp.png',
+        live: '',
+        github: 'https://github.com/PatricioCapparelli/EstacionApp'
+    },
 ]
 
 
@@ -98,13 +131,13 @@ const Work = () => {
                         </div>
                     
                         {/* project category */}
-                        <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">{project.category} project</h2>
+                        <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-amber-500 transition-all duration-500 capitalize">{project.category} project</h2>
                         {/* project description */}
                         <p className="text-white/60">{project.description}</p>
                         {/* project description */}
                         <ul className="flex gap-4">
                             {project.stack.map((item, index) => {
-                                return <li key={index} className="text-xl text-accent">{item.name}
+                                return <li key={index} className="text-xl text-amber-500">{item.name}
                                 {index !== project.stack.length - 1 && ','}
                                 </li>
                             })}
@@ -118,7 +151,7 @@ const Work = () => {
                                 <TooltipProvider delayDuration={100}>
                                     <Tooltip>
                                         <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                                            <BsArrowUpRight className=" text-white text-3xl group-hover:text-accent"/>
+                                            <BsArrowUpRight className=" text-white text-3xl group-hover:text-amber-500"/>
                                         </TooltipTrigger>
                                         <TooltipContent>
                                             <p>Live project</p>
@@ -131,10 +164,10 @@ const Work = () => {
                                 <TooltipProvider delayDuration={100}>
                                     <Tooltip>
                                         <TooltipTrigger className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group">
-                                            <BsGithub className=" text-white text-3xl group-hover:text-accent"/>
+                                            <BsGithub className=" text-white text-3xl group-hover:text-amber-500"/>
                                         </TooltipTrigger>
                                         <TooltipContent>
-                                            <p>GitHub repository</p>
+                                            <p>Repositorio de GitHub</p>
                                         </TooltipContent>
                                     </Tooltip>
                                 </TooltipProvider>

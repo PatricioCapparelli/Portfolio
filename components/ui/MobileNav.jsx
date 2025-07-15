@@ -27,7 +27,7 @@ const MobileNav = () => {
     const pathName = usePathname();
     return <Sheet>
         <SheetTrigger className="flex justify-center items-center">
-        <CiMenuFries className="text-[32px] text-accent" />
+        <CiMenuFries className="text-[32px] text-amber-500" />
         </SheetTrigger>
         <SheetContent className="flex flex-col">
             {/* Logo */}
@@ -45,8 +45,8 @@ const MobileNav = () => {
                     <Link 
                     href={link.path} 
                     key={index} 
-                    className={`${link.path === pathName && "text-accent border-b-2 border-accent"}
-                    text-xl capitalize hover:text-accent transition-all`}>
+                    className={`${link.path === pathName && "text-amber-500 border-b-2 border-amber-500"}
+                    text-xl capitalize hover:text-amber-500 transition-all`}>
                         {link.name}
                     </Link>
                     )

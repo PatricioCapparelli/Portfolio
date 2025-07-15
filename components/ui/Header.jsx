@@ -11,14 +11,14 @@ const Header = () => {
                 { /* logo */}
             <Link href="/">
             <h1 className="text-4xl font-semibold">
-                Pato<span className="text-accent">.</span>
+                Pato<span className="text-amber-500">.</span>
             </h1>
             </Link>
             {/* Desktop nav & button */}
             <div className="hidden xl:flex items-center gap-8">
                 <Nav/>
                 <Link href="/contact">
-                <Button>Hire me</Button>
+                <Button>Escribime</Button>
                 </Link>
             </div>
             { /* Mobile nav */}
