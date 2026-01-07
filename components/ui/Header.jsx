@@ -8,18 +8,18 @@ import MobileNav from "./MobileNav";
 const Header = () => {
     return <header className="py-8 xl:py-12 text-white">
         <div className="container mx-auto justify-between flex items-center">
-                { /* logo */}
+            { /* logo */}
             <Link href="/">
-            <h1 className="text-4xl font-semibold">
-                Pato<span className="text-amber-500">.</span>
-            </h1>
+                <h1 className="text-4xl font-semibold">
+                    Pato<span className="text-amber-500">.</span>
+                </h1>
             </Link>
             {/* Desktop nav & button */}
             <div className="hidden xl:flex items-center gap-8">
-                <Nav/>
-                <Link href="/contact">
-                <Button>Escribime</Button>
-                </Link>
+                <Nav />
+                <Button asChild>
+                    <Link href="/contact">Escribime</Link>
+                </Button>
             </div>
             { /* Mobile nav */}
             <div className="xl:hidden">
